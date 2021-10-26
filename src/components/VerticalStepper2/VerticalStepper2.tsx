@@ -2,7 +2,6 @@ import React from 'react';
 
 import styles from './VerticalStepper2.module.css';
 
-
 const VerticalStepper2 = (): JSX.Element => {
   return (
     <ol className={styles.stepper}>
