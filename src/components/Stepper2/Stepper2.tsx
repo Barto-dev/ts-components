@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Stepper2.module.css';
 
-const Stepper2 = () => {
+const Stepper2 = (): JSX.Element => {
   return (
     <ol className={styles.stepper}>
       <li className={styles.item}>
