@@ -1,0 +1,49 @@
+.stepper {
+  --size: 3rem;
+  --spacing: 0.5rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 4rem;
+
+  &::before {
+    --size: 3rem;
+    content: "";
+    position: relative;
+    z-index: 1;
+    flex: 0 0 var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background-color: lightgrey;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 2px;
+    background-color: #e0e0e0;
+    top: calc(var(--size) + var(--spacing));
+    transform: translateX(calc(var(--size) / 2));
+    bottom: var(--spacing);
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.desc {
+  margin: 0;
+}
+
+.content {
+  max-width: 500px;
+}
